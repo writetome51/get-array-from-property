@@ -2,7 +2,13 @@
 
 ## getArrayFromProperty(property: string, objects): any[]
 
-Returns array of values of <b>property</b> found in each of <b>objects</b>.
+Returns array of values of <b>property</b> found in each of <b>objects</b>.  
+<b>property</b> is a string that can include dot notation ( i.e,  'property.subproperty.subsubproperty' ) .
+
+Note:  <b>property</b> does not have to be an object key. It can also be an array index.  
+If you are getting the values of array indexes, here you need to use dot-notation and not  
+square braces.  Example: `'1.0' instead of [1][0]`
+
 
 ## Examples
 ```
@@ -15,6 +21,15 @@ let names = getArrayFromProperty('name', people);
 // names is [ 'Tom', 'Ron', 'Hank' ]
 
 
+let people = [
+    {name: {first: 'Tom', last: 'Johnson'}},
+    {name: {first: 'Ron', last: 'Thompson'}},
+    {name: {first: 'Hank', last: 'Lawrence'}},
+];
+let names = getArrayFromProperty('name.last', people);
+// names is [ 'Johnson', 'Thompson', 'Lawrence' ]
+
+
 let numbers = [
 	[1,2,3,4],
 	[5,6,7,8],
@@ -24,13 +39,21 @@ let indexOnes = getArrayFromProperty('1', numbers);
 // indexOnes is [ 2, 6, 10 ]
 
 
-let people = [
-    {name: {first: 'Tom', last: 'Johnson'}},
-    {name: {first: 'Ron', last: 'Thompson'}},
-    {name: {first: 'Hank', last: 'Lawrence'}},
+let numbers = [
+	[[1,2], [3,4]],
+	[[5,6], [7,8]],
+	[[9,10], [11,12]]
 ];
-let names = getArrayFromProperty('name.last', people);
-// names is [ 'Johnson', 'Thompson', 'Lawrence' ]
+let nums = getArrayFromProperty('1.0', numbers);
+// nums is [ 3, 7, 11 ]
+```
+
+## Installation
+
+You must have npm installed first.  Then, in the command line:
+
+```bash
+npm install @writetome51/get-array-from-property
 ```
 
 ## Loading

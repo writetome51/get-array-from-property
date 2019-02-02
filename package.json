@@ -25,9 +25,11 @@
     "url": "https://github.com/writetome51/get-array-from-property/issues"
   },
   "homepage": "https://github.com/writetome51/get-array-from-property#readme",
-  "devDependencies": {},
+  "devDependencies": {
+    "@writetome51/arrays-match": "~1.0.4"
+  },
   "dependencies": {
-    "@writetome51/get-property": "~1.0.0",
+    "@writetome51/get-property": "~1.0.1",
     "error-if-not-populated-array": "~1.0.1"
   }
 }
