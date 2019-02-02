@@ -1,23 +1,23 @@
 {
   "name": "@writetome51/get-array-from-property",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Returns array of values of a property found in array of objects",
   "main": "index.js",
   "scripts": {
-   "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/writetome51/get-array-from-property.git"
   },
   "keywords": [
-   "get",
-   "extract",
-   "array",
-   "values",
-   "property",
-   "key",
-   "objects"
+    "get",
+    "extract",
+    "array",
+    "values",
+    "property",
+    "key",
+    "objects"
   ],
   "author": "Steve Thompson",
   "license": "MIT",
@@ -25,8 +25,9 @@
     "url": "https://github.com/writetome51/get-array-from-property/issues"
   },
   "homepage": "https://github.com/writetome51/get-array-from-property#readme",
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "dependencies": {
+    "@writetome51/get-property": "~1.0.0",
+    "error-if-not-populated-array": "~1.0.1"
   }
 }
