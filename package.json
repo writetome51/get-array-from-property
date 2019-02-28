@@ -1,6 +1,6 @@
 {
   "name": "@writetome51/get-array-from-property",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Returns array of values of a property found in array of objects",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
