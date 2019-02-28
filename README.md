@@ -1,12 +1,10 @@
-# getArrayFromProperty()
+# getArrayFromProperty(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;property: string,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;objects<br>): any[]
 
-## getArrayFromProperty(property: string, objects): any[]
+Returns array of values of `property` found in each of `objects`.  
+`property` is a string that can include dot-notation ( 'property.subproperty.subsubproperty' ) .
 
-Returns array of values of <b>property</b> found in each of <b>objects</b>.  
-<b>property</b> is a string that can include dot notation ( i.e,  'property.subproperty.subsubproperty' ) .
-
-Note:  <b>property</b> does not have to be an object key. It can also be an array index.  
-If you are getting the values of array indexes, here you need to use dot-notation and not  
+Note:  `property` does not have to be an object key.  It can also be an array index.  
+If getting the values of array indexes, here you need to use dot-notation and not  
 square braces.  Example: `'1.0' instead of [1][0]`
 
 
