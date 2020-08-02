@@ -15,8 +15,8 @@ let people = [
     {name:'Ron', age: 40},
     {name:'Hank', age: 70},
 ];
-let names = getArrayFromProperty('name', people);
-// names is [ 'Tom', 'Ron', 'Hank' ]
+getArrayFromProperty('name', people);
+   // --> [ 'Tom', 'Ron', 'Hank' ]
 
 
 let people = [
@@ -25,7 +25,7 @@ let people = [
     {name: {first: 'Hank', last: 'Lawrence'}},
 ];
 let names = getArrayFromProperty('name.last', people);
-// names is [ 'Johnson', 'Thompson', 'Lawrence' ]
+   // --> [ 'Johnson', 'Thompson', 'Lawrence' ]
 
 
 let numbers = [
@@ -33,8 +33,8 @@ let numbers = [
 	[5,6,7,8],
 	[9,10,11,12]
 ];
-let indexOnes = getArrayFromProperty('1', numbers);
-// indexOnes is [ 2, 6, 10 ]
+getArrayFromProperty('1', numbers);
+// --> [ 2, 6, 10 ]
 
 
 let numbers = [
@@ -42,23 +42,16 @@ let numbers = [
 	[[5,6], [7,8]],
 	[[9,10], [11,12]]
 ];
-let nums = getArrayFromProperty('1.0', numbers);
-// nums is [ 3, 7, 11 ]
+getArrayFromProperty('1.0', numbers);
+   // --> [ 3, 7, 11 ]
 ```
 
 ## Installation
-
-You must have npm installed first.  Then, in the command line:
-
 ```bash
-npm install @writetome51/get-array-from-property
+npm i @writetome51/get-array-from-property
 ```
 
 ## Loading
-```
-// if using TypeScript:
+```js
 import {getArrayFromProperty} from '@writetome51/get-array-from-property';
-// if using ES5 JavaScript:
-var getArrayFromProperty = 
-    require('@writetome51/get-array-from-property').getArrayFromProperty;
 ```

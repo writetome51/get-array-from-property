@@ -1,15 +1,14 @@
 import { getProperty } from '@writetome51/get-property';
-import { errorIfNotPopulatedArray } from 'error-if-not-populated-array';
+import { errorIfLengthIsZero } from 'error-if-length-is-zero';
 
 
-// param 'property' is allowed to include dot-notation.
+// `property` is allowed to include dot-notation.
 
 export function getArrayFromProperty(property, objects): any[] {
-	errorIfNotPopulatedArray(objects);
+	errorIfLengthIsZero(objects);
 	let values = [];
 	for (let i = 0; i < objects.length; ++i) {
-		let value = getProperty(property, objects[i]);
-		values.push(value);
+		values[i] = getProperty(property, objects[i]);
 	}
 	return values;
 }
