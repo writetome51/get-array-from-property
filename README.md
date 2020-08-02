@@ -34,7 +34,7 @@ let numbers = [
 	[9,10,11,12]
 ];
 getArrayFromProperty('1', numbers);
-// --> [ 2, 6, 10 ]
+   // --> [ 2, 6, 10 ]
 
 
 let numbers = [

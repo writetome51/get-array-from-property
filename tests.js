@@ -1,5 +1,5 @@
-let getArrayFromProperty = require('./index').getArrayFromProperty;
-let arraysMatch = require('@writetome51/arrays-match').arraysMatch;
+import {getArrayFromProperty} from './index.js';
+import {arraysMatch} from '@writetome51/arrays-match';
 
 
 // TEST 1:
