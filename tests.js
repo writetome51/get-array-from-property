@@ -51,8 +51,7 @@ else console.log('test 4 FAILED');
 let errorTriggered = false;
 try {
 	result = getArrayFromProperty('', people);
-}
-catch (e) {
+} catch (e) {
 	errorTriggered = true;
 }
 if (errorTriggered) console.log('test 5 passed');
@@ -63,8 +62,7 @@ else console.log('test 5 FAILED');
 errorTriggered = false;
 try {
 	result = getArrayFromProperty(true, people);
-}
-catch (e) {
+} catch (e) {
 	errorTriggered = true;
 }
 if (errorTriggered) console.log('test 6 passed');
@@ -75,9 +73,18 @@ else console.log('test 6 FAILED');
 errorTriggered = false;
 try {
 	result = getArrayFromProperty('business', []);
-}
-catch (e) {
+} catch (e) {
 	errorTriggered = true;
 }
 if (errorTriggered) console.log('test 7 passed');
 else console.log('test 7 FAILED');
+
+
+// Speed test
+let arr = [];
+for (let i = 0; i < 1000000; ++i) arr.push({num: i});
+console.time('check');
+result = getArrayFromProperty('num', arr);
+console.timeEnd('check')
+console.log(result.length);
+// Avg speed of 20 tests: 150ms
