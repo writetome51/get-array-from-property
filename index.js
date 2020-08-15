@@ -1,3 +1,4 @@
+import {getArrFilled} from '@writetome51/get-arr-filled';
 import {getProperty} from '@writetome51/get-property';
 import {errorIfLengthIsZero} from 'error-if-length-is-zero';
 
@@ -7,9 +8,5 @@ import {errorIfLengthIsZero} from 'error-if-length-is-zero';
 export function getArrayFromProperty(property, objects) {
 	errorIfLengthIsZero(objects);
 
-	let values = [];
-	for (let i = 0; i < objects.length; ++i) {
-		values[i] = getProperty(property, objects[i]);
-	}
-	return values;
+	return getArrFilled(objects.length, (i) => getProperty(property, objects[i]));
 }
