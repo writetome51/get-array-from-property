@@ -1,12 +1,13 @@
 {
-  "name": "@writetome51/get-array-from-property",
-  "version": "2.0.1",
+  "name": "@writetome51/get-array-of-property",
+  "version": "0.0.1",
   "description": "Returns array of values of a property found in array of objects",
   "type": "module",
   "main": "index.js",
+  "types": "index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/writetome51/get-array-from-property.git"
+    "url": "git+https://github.com/writetome51/get-array-of-property.git"
   },
   "keywords": [
     "get",
@@ -20,15 +21,14 @@
   "author": "Steve Thompson",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/writetome51/get-array-from-property/issues"
+    "url": "https://github.com/writetome51/get-array-of-property/issues"
   },
-  "homepage": "https://github.com/writetome51/get-array-from-property#readme",
+  "homepage": "https://github.com/writetome51/get-array-of-property#readme",
   "devDependencies": {
-    "@writetome51/arrays-match": "^2.0.0"
+    "@writetome51/arrays-match": "^2.0.1"
   },
   "dependencies": {
     "@writetome51/get-arr-filled": "^0.0.2",
-    "@writetome51/get-property": "^2.0.0",
-    "error-if-length-is-zero": "^1.0.1"
+    "@writetome51/get-property": "^2.0.1"
   }
 }
