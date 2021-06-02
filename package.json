@@ -1,6 +1,6 @@
 {
   "name": "@writetome51/get-array-of-property",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Returns array of values of a property found in array of objects",
   "type": "module",
   "main": "index.js",
@@ -25,10 +25,10 @@
   },
   "homepage": "https://github.com/writetome51/get-array-of-property#readme",
   "devDependencies": {
-    "@writetome51/arrays-match": "^2.0.1"
+    "@writetome51/is-match": "^0.0.1"
   },
   "dependencies": {
-    "@writetome51/get-arr-filled": "^0.0.2",
+    "@writetome51/get-arr-filled": "^0.0.4",
     "@writetome51/get-property": "^2.0.1"
   }
 }

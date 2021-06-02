@@ -1,5 +1,5 @@
 import {getArrayOfProperty} from './index.js';
-import {arraysMatch} from '@writetome51/arrays-match';
+import {isMatch} from '@writetome51/is-match';
 
 
 // TEST 1:
@@ -9,7 +9,7 @@ let people = [
 	{name: 'Hank', age: 70},
 ];
 let names = getArrayOfProperty('name', people);
-if (arraysMatch(names, ['Tom', 'Ron', 'Hank'])) console.log('test 1 passed');
+if (isMatch(names, ['Tom', 'Ron', 'Hank'])) console.log('test 1 passed');
 else console.log('test 1 FAILED');
 
 
@@ -20,7 +20,7 @@ let arrs = [
 	[9, 10, 11, 12]
 ];
 let result = getArrayOfProperty('1', arrs);
-if (arraysMatch(result, [2, 6, 10])) console.log('test 2 passed');
+if (isMatch(result, [2, 6, 10])) console.log('test 2 passed');
 else console.log('test 2 FAILED');
 
 
@@ -31,7 +31,7 @@ let numbers = [
 	[[9, 10], [11, 12]]
 ];
 let nums = getArrayOfProperty('1.0', numbers);
-if (arraysMatch(nums, [3, 7, 11])) console.log('test 3 passed');
+if (isMatch(nums, [3, 7, 11])) console.log('test 3 passed');
 else console.log('test 3 FAILED');
 
 
@@ -42,23 +42,13 @@ people = [
 	{name: {first: 'Hank', last: 'Lawrence'}},
 ];
 names = getArrayOfProperty('name.last', people);
-if (arraysMatch(names, ['Johnson', 'Thompson', 'Lawrence'])) console.log('test 4 passed');
+if (isMatch(names, ['Johnson', 'Thompson', 'Lawrence'])) console.log('test 4 passed');
 else console.log('test 4 FAILED');
 
 
-// Test 5:
-let errorTriggered = false;
-try {
-	result = getArrayOfProperty('', people);
-} catch (e) {
-	errorTriggered = true;
-}
-if (errorTriggered) console.log('test 5 passed');
-else console.log('test 5 FAILED');
-
 
 // TEST 6:
-errorTriggered = false;
+let errorTriggered = false;
 try {
 	result = getArrayOfProperty(true, people);
 } catch (e) {
